@@ -15,7 +15,7 @@ RUN npm run build
 #Specify the start of a second build phase:
 
 FROM nginx 
-
+EXPOSE 80
 # The second FROM statement indicates the termination of the first block
 
 COPY --from=builder /app/build /usr/share/nginx/html
